@@ -1,0 +1,29 @@
+!R2SCAN def2-TZVP VERYSLOWCONV
+
+%scf
+  AutoTRAHIter 200
+  maxiter 400
+end
+
+%pal nprocs 6 end 
+
+*xyzfile 0 5 pbe.xyz
+
+$new_job
+
+!R2SCAN def2-TZVP VERYSLOWCONV
+
+
+%scf
+  AutoTRAHIter 200
+  maxiter 400
+end
+
+
+%pal nprocs 6 end 
+
+*xyzfile 0 3 pbe.xyz
+
+
+
+
