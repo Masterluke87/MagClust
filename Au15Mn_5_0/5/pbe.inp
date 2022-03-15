@@ -1,6 +1,10 @@
-%pal nprocs 1 end 
+%pal nprocs 16 end 
 
 !PBE def2-TZVP OPT UNO
 !SLOWCONV
 
-*xyzfile 0 5 5.xyz 
+%geom
+  maxiter 200
+end
+
+*xyzfile 0 5 5-4.xyz 
