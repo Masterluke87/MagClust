@@ -1,6 +1,0 @@
-%pal nprocs 1 end 
-
-!PBE def2-TZVP OPT UNO
-!VERYSLOWCONV
-
-*xyzfile 0 3 5.xyz 
