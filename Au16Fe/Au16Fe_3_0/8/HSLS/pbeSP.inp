@@ -1,0 +1,30 @@
+!PBE def2-TZVP VERYSLOWCONV
+
+%scf
+  AutoTRAHIter 200
+  maxiter 400
+end
+
+
+%pal nprocs 6 end 
+
+*xyzfile 0 5 pbe.xyz
+
+$new_job
+
+!PBE def2-TZVP KDIIS VERYSLOWCONV
+
+%scf
+  AutoTRAHIter 400
+  maxiter 800
+  DIISMaxEq 15
+end
+ 
+
+%pal nprocs 6 end 
+
+*xyzfile 0 3 pbe.xyz
+
+
+
+
