@@ -1,0 +1,21 @@
+!DLPNO-CCSD(T) def2-TZVP VERYSLOWCONV
+!def2-TZVP/C HCORE NOTRAH RIJCOSX
+
+%pal nprocs 6 end 
+%scf maxiter 1000 end
+%maxcore 4000
+
+*xyzfile 0 5 pbe.xyz
+
+$new_job
+
+!DLPNO-CCSD(T) def2-TZVP VERYSLOWCONV
+!def2-TZVP/C
+
+%pal nprocs 6 end 
+
+*xyzfile 0 3 pbe.xyz
+
+
+
+
