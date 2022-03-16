@@ -1,0 +1,15 @@
+**/*.tmp
+**/*.gbw
+**/*.ges
+**/CALCINFO
+**/*.txt
+**/*.densities
+**/*.engrad   
+**/*.opt      
+**/*.qro      
+**/*.uno      
+**/*.unso
+**/*.X     
+
+!**/*.out
+!**/*.xyz
