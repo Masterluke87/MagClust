@@ -1,0 +1,6 @@
+%pal nprocs 16 end 
+
+!PBE def2-TZVP UNO
+!SLOWCONV
+
+*xyzfile 0 5 pbe.xyz 
