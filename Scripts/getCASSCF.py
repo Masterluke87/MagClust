@@ -5,7 +5,7 @@ from util.energyReader import readHSLSinOneFolder
 def getCASSCFEnergies(pathFile):
     N  = open(f"./{pathFile}/CASSCF/nevpt2.out").readlines()
 
-    
+    print(f"./{pathFile}/CASSCF/nevpt2.out")   
     c  = [c for c,x in enumerate(N) if "SA-CASSCF TRANSITION ENERGIES" in x ][0]
     Data = {"ID"     : pathFile,
             "CAS-E"  : N[c+3].split()[7],
