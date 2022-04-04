@@ -1,6 +1,3 @@
-import json
-from tabulate import tabulate
-
 
 def readMultEnergy(filename):
     """
