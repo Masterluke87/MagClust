@@ -1,4 +1,4 @@
-%pal nprocs 1 end 
+%pal nprocs 16 end 
 
 !PBE def2-TZVP OPT UNO
 !SLOWCONV KDIIS 
