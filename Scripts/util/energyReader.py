@@ -14,15 +14,15 @@ def getCASSCFEnergies(pathFile):
     print(f"./{pathFile}/CASSCF/nevpt2.out")
     c  = [c for c,x in enumerate(N) if "SA-CASSCF TRANSITION ENERGIES" in x ][0]
     Data = {"ID"     : pathFile,
-            "CAS-E"  : N[c+3].split()[7],
-            "CAS-C"  : N[c+3].split()[3],
+            "CAS-E"  : N[c+3].split()[7]),
+            "CAS-C"  : float(N[c+3].split()[3]),
             "CAS-M"  : N[c+3].split()[5].replace(")",""),
-            "CAS-EX" : N[c+6].split()[3]}
+            "CAS-EX" : float(N[c+6].split()[3])}
     c  = [c for c,x in enumerate(N) if "NEVPT2 TRANSITION ENERGIES" in x ][0]
-    Data["NEV-E"]  =  N[c+3].split()[7]
-    Data["NEV-C"]  =  N[c+3].split()[3].replace(",","")
-    Data["NEV-M"]  =  N[c+3].split()[5].replace(")","")
-    Data["NEV-EX"] = N[c+6].split()[3]
+    Data["NEV-E"]     =  N[c+3].split()[7]
+    Data["CAS-ROOT"]  =  N[c+3].split()[3].replace(",","")
+    Data["NEV-M"]     =  N[c+3].split()[5].replace(")","")
+    Data["NEV-EX"]    =  float(N[c+6].split()[3])
     c = [c for c,x in enumerate(N) if "EFFECTIVE HAMILTONIAN SPIN-ORBIT COUPLING CONTRIBUTION" in x][0]
     Data["D"]      = float([x.split()[2] for x in N[c:c+200] if "D   =" in x][0])
     Data["EoverD"] = float([x.split()[2] for x in N[c:c+200] if "E/D =" in x][0])
