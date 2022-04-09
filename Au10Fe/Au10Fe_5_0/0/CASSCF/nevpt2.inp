@@ -1,0 +1,25 @@
+!SC-NEVPT2 def2-TZVP def2-TZVP/C
+!MOREAD RIJCOSX def2/J
+%maxcore 4000
+%moinp "casscf.gbw"
+%pal nprocs 8 end 
+
+%casscf
+ mult 5,3
+ bweight 1,1
+ nroots 5,45
+ nel 6
+ norb 5
+ ptsettings
+  d4tpre 0.0
+  d3tpre 0.0
+ end
+ rel           
+   dosoc true   
+   gtensor true 
+ end           
+end
+
+
+*xyzfile 0 5 pbe.xyz
+
