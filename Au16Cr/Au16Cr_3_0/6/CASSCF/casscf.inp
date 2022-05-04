@@ -1,0 +1,18 @@
+!CASSCF def2-TZVP def2-TZVP/C
+!MOREAD RIJCOSX
+%maxcore 6000
+%moinp "pbe.qro"
+%pal nprocs 2 end 
+
+%casscf
+ mult 5,3
+ switchstep nr
+ bweight 1,1
+ nroots 5,45
+ nel 6
+ norb 5
+end
+
+
+*xyzfile 0 5 pbe.xyz
+

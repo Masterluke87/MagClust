@@ -1,0 +1,31 @@
+!RI-B2PLYP def2-TZVP def2-TZVP/C
+!RIJCOSX VERYSLOWCONV
+
+%scf
+  AutoTRAHIter 200
+  maxiter 400
+end
+
+
+%pal nprocs 6 end 
+
+*xyzfile 0 5 pbe.xyz
+
+$new_job
+
+!RI-B2PLYP def2-TZVP def2-TZVP/C
+!RIJCOSX VERYSLOWCONV
+
+%scf
+  AutoTRAHIter 200
+  maxiter 400
+end
+
+
+%pal nprocs 6 end 
+
+*xyzfile 0 3 pbe.xyz
+
+
+
+
