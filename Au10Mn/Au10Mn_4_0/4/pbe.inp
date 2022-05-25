@@ -1,0 +1,8 @@
+%pal nprocs 6 end 
+
+!PBE def2-TZVP OPT UNO
+!SLOWCONV KDIIS 
+
+%geom maxiter 300 end
+
+*xyzfile 0 4 4.xyz 
